@@ -4,6 +4,7 @@ import routes from '@/router';
 import { useAppSelector, useAppDispatch } from '@/store';
 import { incrementByAmount } from '@/store/modules/counter';
 import CommonHeader from './components/app-header/commonHeader';
+import AppFooter from './components/app-footer';
 // type GetStateFnType = typeof store.getState;
 // type IRootState = ReturnType<GetStateFnType>;
 function App() {
@@ -19,13 +20,14 @@ function App() {
   return (
     <div className='App'>
       <CommonHeader />
-      <h2>
+      {/* <h2>
         计数{count}-----{message}
       </h2>
-      <button onClick={handleCount}>点击</button>
+      <button onClick={handleCount}>点击</button> */}
       <Suspense fallback={<div>Loading...</div>}>
         <div className='main'>{useRoutes(routes)}</div>
       </Suspense>
+      <AppFooter />
     </div>
   );
 }

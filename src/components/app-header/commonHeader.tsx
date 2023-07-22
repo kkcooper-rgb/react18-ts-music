@@ -53,6 +53,7 @@ const CommonHeader: FC<IProps> = () => {
           <span className='login'>登录</span>
         </HeaderRight>
       </div>
+      <div className='divider'></div>
     </HeaderWrapper>
   );
 };
