@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
-import { useRoutes, Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useRoutes } from 'react-router-dom';
 import routes from '@/router';
 import { useAppSelector, useAppDispatch } from '@/store';
 import { incrementByAmount } from '@/store/modules/counter';
+import CommonHeader from './components/app-header/commonHeader';
 // type GetStateFnType = typeof store.getState;
 // type IRootState = ReturnType<GetStateFnType>;
 function App() {
@@ -18,12 +18,7 @@ function App() {
   }
   return (
     <div className='App'>
-      <div className='nav'>
-        <Link to={'/discover'}>发现音乐</Link>
-        <Link to={'/mine'}>我的音乐</Link>
-        <Link to={'/focus'}>关注</Link>
-        <Link to={'/download'}>下载客户端</Link>
-      </div>
+      <CommonHeader />
       <h2>
         计数{count}-----{message}
       </h2>
