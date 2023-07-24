@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const NavWrapper = styled.div`
   height: 30px;
@@ -29,4 +29,4 @@ export const NavWrapper = styled.div`
       }
     }
   }
-`
+`;
