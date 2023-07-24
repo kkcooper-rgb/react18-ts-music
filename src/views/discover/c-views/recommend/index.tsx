@@ -2,6 +2,7 @@ import { useAppDispatch } from '@/store';
 import React, { memo, useState, useEffect } from 'react';
 import type { FC, ReactNode } from 'react';
 import { fetchBanners } from './store/recommend';
+import { RecommendWrapper } from './style';
 import TopBanner from './c-cpns/top-banner';
 // import hyRequest from '@/service';
 interface IProps {
@@ -15,10 +16,18 @@ const Recommend: FC<IProps> = (props) => {
     console.log(count);
   }, []);
   return (
-    <div>
+    <RecommendWrapper>
       <TopBanner />
-      Recommend
-    </div>
+      <div className='content wrap-v2'>
+        <div className='left'>
+          2222
+          {/* <HotRecommend />
+          <NewAlbum />
+          <TopRanking /> */}
+        </div>
+        <div className='right'>right</div>
+      </div>
+    </RecommendWrapper>
   );
 };
 export default memo(Recommend);
